@@ -1,0 +1,18 @@
+<h1>Current Conditions for <%= @forecast['postal_code'] %></h1>
+
+<div style="display: flex; align-items: center;border: 1px solid black; padding: 10px; border-radius: 5px;">
+  <%= image_tag "https://openweathermap.org/img/wn/#{@forecast['icon']}@2x.png" %>
+  <h3><%= @forecast['description'].capitalize %></h3>
+</div>
+
+<h3>Temperature: <%= @forecast['temp'] %> F</h3>
+<h3>Feels Like: <%= @forecast['feels_like'] %> F</h3>
+<h3>Low: <%= @forecast['temp_min'] %> F</h3>
+<h3>High: <%= @forecast['temp_max'] %> F</h3>
+<h3>Humidity: <%= @forecast['humidity'] %> %</h3>
+
+<i>Last updated <%= @forecast['last_updated']%> minutes ago</i>
+<br/>
+<br/>
+
+<%= link_to "Back", root_path %>

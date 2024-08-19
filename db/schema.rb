@@ -12,23 +12,8 @@
 
 ActiveRecord::Schema[7.0].define(version: 2024_08_19_073929) do
   create_table "forecasts", force: :cascade do |t|
-    t.string "zipcode"
-    t.datetime "sunrise"
-    t.datetime "sunset"
-    t.decimal "temp"
-    t.decimal "feels_like"
-    t.integer "pressure"
-    t.integer "humidity"
-    t.decimal "dew_point"
-    t.decimal "uvi"
-    t.integer "clouds"
-    t.integer "visibility"
-    t.decimal "wind_speed"
-    t.integer "wind_deg"
-    t.decimal "wind_gust"
-    t.string "main_descriptor"
-    t.string "description"
-    t.string "icon"
+    t.string "postal_code", null: false
+    t.string "data", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

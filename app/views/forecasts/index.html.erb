@@ -1,0 +1,25 @@
+<%= flash[:error] %>
+<h1>Get a Forecast</h1>
+<%= form_tag forecasts_path, method: :post do %>
+  <%= label_tag :street %>
+  </br>
+  <%= text_field_tag :street %>
+  </br></br>
+  <%= label_tag :city %>
+  </br>
+  <%= text_field_tag :city %>
+  </br></br>
+  <%= label_tag :state %>
+  </br>
+  <%= text_field_tag :state %>
+  </br></br>
+  <%= label_tag :country %>
+  </br>
+  <%= text_field_tag :country %>
+  </br></br>
+  <%= label_tag 'Postal code (required)' %>
+  </br>
+  <%= text_field_tag :postal_code %>
+  </br></br>
+  <%= submit_tag "Get Forecast" %>
+<% end %>
